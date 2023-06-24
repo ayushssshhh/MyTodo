@@ -1,0 +1,48 @@
+.card{
+    width: 500px;
+    background-image: linear-gradient(45deg , rgba(255, 255, 255, 0) , rgba(233, 232, 228, 0.874));
+    border-radius: 10px;
+    padding: 5px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    border: 1px inset rgba(128, 128, 128, 0.276);
+    transform: translate(-50% , -50%);
+    backdrop-filter: blur(2px);
+    /* height: 300px; */
+}
+
+.toggle{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 2px;
+  cursor: pointer;
+  border-bottom: solid 6px white;
+}
+
+.log , .sig{
+  font-size: 20px;
+  font-family: monospace;
+  display: inline;
+  padding: 10px 30px;
+  width: 100%;
+  text-align: center;
+}
+
+.active{
+  background-color: white;
+}
+
+
+@media screen and (max-width: 600px) {
+    .card {
+      width: 400px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .card {
+      width: 300px;
+    }
+  }
