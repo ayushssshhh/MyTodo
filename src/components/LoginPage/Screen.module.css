@@ -2,14 +2,9 @@
     position: relative;
     padding: 0;
     margin: 0;
-    height: 110vh;
+    height: 100vh;
     width: 100vw;
     background-image: url('../../images/bg2.jpg');
     background-position: center;
     background-size: cover;
-    /* background-color: aquamarine; */
-}
-
-.toggle{
-
 }

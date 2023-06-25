@@ -1,9 +1,12 @@
 import classes from './SignForm.module.css'
 import Input from '../../UI/Input'
-import { useState, useEffect } from 'react'
+import { useState, useEffect , useContext} from 'react'
+import UserContext from '../../../store/user-context'
 
 const SignForm = (props) => {
 
+    const userCtx = useContext(UserContext);
+    
     const [passwordValidity, setPasswordValidity] = useState(true)
     const [password, setPassword] = useState('')
 
@@ -88,6 +91,8 @@ const SignForm = (props) => {
                 response.json().then((result) => {
                     if (result.result == 'success') {
                         setMessageState(false)
+                        userCtx.setTrue();
+                        userCtx.setCredential(username)
                     } else {
                         setMessageState(true)
                     }

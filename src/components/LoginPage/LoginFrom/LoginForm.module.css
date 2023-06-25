@@ -12,12 +12,13 @@ button{
     letter-spacing: 2px;
     padding: 4px 10px;
     width: 100%;
-    transition: 0.3s;
+    transition: 0.15s;
 }
 
-button:hover{
+button:active{
     background-color: rgb(0, 0, 0);
     letter-spacing: 5px;
     color: white;
     border-radius: 5px;
+    /* transition: 0.8; */
 }

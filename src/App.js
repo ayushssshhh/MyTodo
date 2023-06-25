@@ -1,10 +1,11 @@
 import Screen from "./components/LoginPage/Screen";
+import UserProvider from "./store/UserProvider";
 
 function App() {
   return (
-    <div>
-      <Screen/>
-    </div>
+    <UserProvider>
+      <Screen />
+    </UserProvider>
   );
 }
 

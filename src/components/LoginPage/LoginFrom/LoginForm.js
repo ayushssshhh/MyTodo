@@ -1,9 +1,12 @@
 import classes from './LoginForm.module.css'
 import Input from '../../UI/Input'
-import { useState , useEffect } from 'react'
+import { useState , useEffect , useContext} from 'react'
+import UserContext from '../../../store/user-context'
 
 
 const LoginForm = (props) => {
+
+    const userCtx = useContext(UserContext);
 
     const [passwordValidity , setPasswordValidity] = useState(true)
     const [password , setPassword] = useState('')
@@ -65,11 +68,17 @@ const LoginForm = (props) => {
                     if(result.user == 'success'){
                         if(result.pass == 'success'){
                             setMessageState(false)
+                            userCtx.setTrue();
+                            userCtx.setCredential(username)
                         } else if(result.password == 'fail') {
                             setMessageState(true);
+                            userCtx.setFalse();
+                            userCtx.setCredential('')
                         }
                     } else{
                         setMessageState(true)
+                        userCtx.setFalse();
+                        userCtx.setCredential('')
                     }
                     
                 })
@@ -108,7 +117,7 @@ const LoginForm = (props) => {
                 onChange = {passwordChangeHandler}
                 onBlur = {passwordBlurHandler}
                 valid = {passwordValidity}
-                mess = 'Password must have 6 or more character'
+                mess = 'Password must have 7 or more character'
             />
             {messageState && <p>Incorect username password</p>}
             <button  type='Submit'>{btn}</button>
