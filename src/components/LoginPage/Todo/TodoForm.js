@@ -9,7 +9,6 @@ const TodoForm = (props) => {
     const userCtx = useContext(UserContext);
 
 
-    userCtx.setCredential('u1');
     const user = userCtx.credential;
 
     useEffect(() => {

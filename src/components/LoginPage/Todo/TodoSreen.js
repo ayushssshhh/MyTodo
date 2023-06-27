@@ -13,9 +13,10 @@ const TodoScreen = (props) => {
     let fetchedData;
 
     const user = userCtx.credential;
+    console.log(user)
     useEffect(() => {
         fetchTask()
-    }, [counter])
+    }, [])
 
     const fetchTask = useCallback(
         () => {
@@ -30,7 +31,7 @@ const TodoScreen = (props) => {
                             return ({ id: item._id, task: item.task });
                         })
 
-                        fetchedData.forEach(item => {
+                        fetchedData.map(item => {
                             setTaskArray(prevState => [...prevState, item])
                         })
 
