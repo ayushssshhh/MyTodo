@@ -5,6 +5,7 @@ import SignForm from "./SignForm/SignForm";
 import LoginForm from "./LoginFrom/LoginForm";
 import UserContext from "../../store/user-context";
 import TodoScreen from "./Todo/TodoSreen";
+import TodoForm from "./Todo/TodoForm";
 
 const Screen = (props) => {
 
@@ -27,8 +28,9 @@ const Screen = (props) => {
 
     return (
         <div className={classes.con}>
-            {/* {!userCtx.login && card} */}
-            {<TodoScreen/>}
+            {!userCtx.login && card}
+            {userCtx.login && <TodoScreen/>}
+            {/* <TodoScreen/> */}
         </div>
     );
 }

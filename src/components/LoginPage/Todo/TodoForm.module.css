@@ -1,0 +1,46 @@
+.todo{
+    width: 90vw;
+    position: relative;
+    left : 50%;
+    transform: translate(-50%);
+}
+
+.todo form{
+    width: fit-content;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.todo input{
+    margin-top: 50px;
+    
+    font-size: 20px;
+    width: 280px;
+    padding: 5px 20px;
+    box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.18);
+}
+
+.btn{
+    font-size: 25px;
+    width: auto;
+    padding: 10px;
+    position: absolute;
+    color: rgb(222, 183, 12);
+    transform: translate(-5px,40px);
+    border: 3px rgba(255, 208, 0, 0.404) solid;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.311);
+}
+
+
+.btn:active {
+    transform: rotate(180deg) , translate(150px);
+    border: none;
+    background-color: rgb(222, 183, 12);;
+}
+
+.para{
+    position: absolute;
+    left: 50%;
+    transform: translate(0%, -40%);
+}
